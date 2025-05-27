@@ -80,3 +80,10 @@ Contiene información relevante de las personas interesadas o que han realizado 
   "precio": 35000,
   "estado": "Disponible"
 }
+```
+
+---
+
+## Diagrama de Clases
+
+![Untitled-2025-04-28-1453](https://github.com/user-attachments/assets/c435f28e-8f1b-40e5-b8ba-7027196f0e79)
