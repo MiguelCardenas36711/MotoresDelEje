@@ -52,7 +52,7 @@ Contiene los datos de las motocicletas disponibles para la venta.
 - `venta()`  
   Registra la venta de un vehículo y actualiza su estado.
 
-- `actualizarVehiculos()`  
+- `actualizarInfoVehiculos()`  
   Permite modificar datos de vehículos ya ingresados (como el precio, color, o kilometraje).
 
 - `filtrarVehiculos()`  
@@ -61,7 +61,7 @@ Contiene los datos de las motocicletas disponibles para la venta.
 - `agregarCliente()`  
   Para registrar nuevos clientes
 
-- `generarReporte()`  
+- `actualizarInventario()`  
   Para obtener reportes de ventas y stock
 
 ---
