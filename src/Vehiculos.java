@@ -1,4 +1,8 @@
 public class Vehiculos {
+
+    // ==========
+    // Atributos:
+    // ==========
     private String placa;
     private String marca;
     private String modelo;
@@ -13,7 +17,9 @@ public class Vehiculos {
     private String transmision; // Manual / Automatica
     private int numeroDueñosAnteriores;
 
+    // ============
     // Constructor:
+    // ============
     public Vehiculos(String placa, String marca, String modelo, int año, String color, int kilometraje,
                      String fechaIngreso, String fechaVenta, double precio, String estado,
                      String tipoCombustible, String transmision, int numeroDueñosAnteriores) {
@@ -32,7 +38,9 @@ public class Vehiculos {
         this.numeroDueñosAnteriores = numeroDueñosAnteriores;
     }
 
+    // =========
     // Metodos:
+    // =========
     public void actualizarInfoVehiculos(String nuevoColor, int nuevoKilometraje, double nuevoPrecio) {
         this.color = nuevoColor;
         this.kilometraje = nuevoKilometraje;
