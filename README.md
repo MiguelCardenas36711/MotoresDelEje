@@ -51,16 +51,16 @@ Contiene información relevante de las personas interesadas o que han realizado 
 - `venta()`  
   Registra la venta de un vehículo y actualiza su estado.
 
-- `actualizarInfoVehiculos()`  
+- `actualizarVehiculos()`  
   Permite modificar datos de vehículos ya ingresados (como el precio, color, o kilometraje).
 
-- `filtrarVehiculos()`   
+- `filtrarVehiculos()` 
   Para búsquedas según atributos (ej. marca, precio, año)
 
-- `agregarCliente()`   
+- `agregarCliente()`
   Para registrar nuevos clientes
 
-- `actualizarInventario()`   
+- `generarReporte()`
   Para obtener reportes de ventas y stock
 
 ---
