@@ -10,6 +10,10 @@
 
 Esta clase sirve como base para todos los tipos de vehículos registrados en el sistema.
 
+### 🔹 Clase: `Clientes`
+
+Contiene información relevante de las personas interesadas o que han realizado una compra/venta.
+
 ---
 
 ### 🔸 Clases Hijas
@@ -19,9 +23,6 @@ Representa todos los automóviles en el inventario.
 
 #### 🏍️ `Motos`
 Contiene los datos de las motocicletas disponibles para la venta.
-
-#### 👤 `Clientes`
-Contiene información relevante de las personas interesadas o que han realizado una compra/venta.
 
 ---
 
@@ -51,16 +52,16 @@ Contiene información relevante de las personas interesadas o que han realizado 
 - `venta()`  
   Registra la venta de un vehículo y actualiza su estado.
 
-- `actualizarVehiculos()`  
+- `actualizarInfoVehiculos()`  
   Permite modificar datos de vehículos ya ingresados (como el precio, color, o kilometraje).
 
-- `filtrarVehiculos()` 
+- `filtrarVehiculos()`  
   Para búsquedas según atributos (ej. marca, precio, año)
 
-- `agregarCliente()`
+- `agregarCliente()`  
   Para registrar nuevos clientes
 
-- `generarReporte()`
+- `actualizarInventario()`  
   Para obtener reportes de ventas y stock
 
 ---
@@ -80,3 +81,10 @@ Contiene información relevante de las personas interesadas o que han realizado 
   "precio": 35000,
   "estado": "Disponible"
 }
+```
+
+---
+
+## Diagrama de Clases
+
+![Untitled-2025-04-28-1453](https://github.com/user-attachments/assets/c435f28e-8f1b-40e5-b8ba-7027196f0e79)
