@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+//Inventario de Vehiculos
 public class InventarioVehiculos {
     private List<Vehiculo> listaVehiculos;
 
