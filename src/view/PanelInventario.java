@@ -8,6 +8,7 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
+import java.text.DecimalFormat;
 
 public class PanelInventario extends JPanel {
     private JTable tabla;
@@ -42,6 +43,11 @@ public class PanelInventario extends JPanel {
         }, 0);
         tabla = new JTable(modelo);
         add(new JScrollPane(tabla), BorderLayout.CENTER);
+
+        JButton btnEliminar = new JButton("Eliminar Vehículo");
+        btnEliminar.addActionListener(e -> eliminarVehiculoSeleccionado());
+        add(btnEliminar, BorderLayout.SOUTH);
+
 
         // Botón adicional si quieres seguir con "Cargar Datos"
         // add(btnCargar, BorderLayout.SOUTH);
@@ -105,10 +111,46 @@ public class PanelInventario extends JPanel {
 
                 modelo.addRow(new Object[]{
                         v.obtenerTipo(), v.getMarca(), v.getModelo(),
-                        v.getAnio(), "$" + v.getPrecio(), detalle
+                        v.getAnio(), Utilidades.formatearPrecio(v.getPrecio()), detalle
                 });
             }
         }
     }
+
+    private void eliminarVehiculoSeleccionado() {
+        int filaSeleccionada = tabla.getSelectedRow();
+        if (filaSeleccionada == -1) {
+            JOptionPane.showMessageDialog(this, "Selecciona un vehículo para eliminar.");
+            return;
+        }
+
+        String marca = modelo.getValueAt(filaSeleccionada, 1).toString();
+        String modeloVehiculo = modelo.getValueAt(filaSeleccionada, 2).toString();
+        int anio = Integer.parseInt(modelo.getValueAt(filaSeleccionada, 3).toString());
+
+        int respuesta = JOptionPane.showConfirmDialog(this,
+                "¿Seguro que quieres eliminar el vehículo " + marca + " " + modeloVehiculo + " (" + anio + ")?",
+                "Confirmar eliminación",
+                JOptionPane.YES_NO_OPTION);
+
+        if (respuesta == JOptionPane.YES_OPTION) {
+            Vehiculo vehiculoAEliminar = null;
+            for (Vehiculo v : inventario.obtenerTodos()) {
+                if (v.getMarca().equals(marca) && v.getModelo().equals(modeloVehiculo) && v.getAnio() == anio) {
+                    vehiculoAEliminar = v;
+                    break;
+                }
+            }
+
+            if (vehiculoAEliminar != null) {
+                inventario.eliminarVehiculo(vehiculoAEliminar);
+                PersistenciaVehiculos.guardarInventario(inventario.obtenerTodos());
+                cargarVehiculosFiltrados();
+                JOptionPane.showMessageDialog(this, "Vehículo eliminado correctamente.");
+            }
+        }
+    }
+
+
 
 }
