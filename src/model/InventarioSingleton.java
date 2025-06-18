@@ -12,3 +12,5 @@ public class InventarioSingleton {
         return instancia;
     }
 }
+
+// .
