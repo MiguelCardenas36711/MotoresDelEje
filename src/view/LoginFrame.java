@@ -39,7 +39,7 @@ public class LoginFrame extends JFrame {
         String usuario = txtUsuario.getText();
         String contrasena = new String(txtContrasena.getPassword());
 
-        if (usuario.equals("admin") && contrasena.equals("1234")) {
+        if (usuario.equals("Proyecto") && contrasena.equals("1234")) {
             JOptionPane.showMessageDialog(this, "¡Bienvenido, " + usuario + "!");
             dispose(); // Cierra la ventana de login
             new VentanaPrincipal(); // Abre el sistema principal

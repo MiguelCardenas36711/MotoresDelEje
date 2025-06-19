@@ -75,6 +75,7 @@ public class FormularioVehiculoPanel extends JPanel {
             }
 
             inventario.agregarVehiculo(v);
+            PersistenciaVehiculos.guardarInventario(inventario.obtenerTodos());
             JOptionPane.showMessageDialog(this, "Vehículo agregado exitosamente");
             limpiarFormulario();
         } catch (Exception ex) {
