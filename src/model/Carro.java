@@ -1,10 +1,15 @@
 package model;
 
+import java.time.LocalDate;
+
 public class Carro extends Vehiculo {
     private int numeroPuertas;
 
-    public Carro(String marca, String modelo, int anio, double precio, int numeroPuertas) {
-        super(marca, modelo, anio, precio);
+    public Carro(String placa, String marca, String modelo, int anio, String color, double kilometraje,
+                 LocalDate fechaIngreso, double precio, Estado estado, Combustible combustible,
+                 Transmision transmision, int numeroDuenoAnterior, int numeroPuertas) {
+        super(placa, marca, modelo, anio, color, kilometraje, fechaIngreso, precio,
+                estado, combustible, transmision, numeroDuenoAnterior);
         this.numeroPuertas = numeroPuertas;
     }
 
