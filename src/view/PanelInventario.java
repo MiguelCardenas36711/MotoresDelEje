@@ -109,7 +109,7 @@ public class PanelInventario extends JPanel {
         }
     }
 
-    private void cargarVehiculosFiltrados() {
+    public void cargarVehiculosFiltrados() {
         modelo.setRowCount(0); // limpia tabla
 
         String marcaFiltro = txtMarcaFiltro.getText().trim().toLowerCase();

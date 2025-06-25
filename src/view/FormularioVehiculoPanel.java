@@ -27,6 +27,7 @@ public class FormularioVehiculoPanel extends JPanel {
         setBackground(new Color(45, 45, 45));
         setBorder(BorderFactory.createEmptyBorder(20, 30, 20, 30));
 
+
         JLabel titulo = new JLabel("➕ Agregar Vehículo", SwingConstants.CENTER);
         titulo.setFont(new Font("Segoe UI", Font.BOLD, 24));
         titulo.setForeground(Color.WHITE);
