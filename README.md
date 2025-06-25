@@ -192,4 +192,4 @@ Desarrollar una aplicación de escritorio en Java utilizando Swing, orientada a 
 
 ## Diagrama de Clases
 
-![diagramaClases.jpg](../diagramaClases.jpg)
+![diagramaClases](https://github.com/user-attachments/assets/36b4f051-be5a-45bb-96e2-3cd53126d016)
