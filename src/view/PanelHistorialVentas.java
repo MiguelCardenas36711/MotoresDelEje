@@ -6,7 +6,6 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.io.*;
-import java.util.Vector;
 
 public class PanelHistorialVentas extends JPanel {
     private JTable tabla;

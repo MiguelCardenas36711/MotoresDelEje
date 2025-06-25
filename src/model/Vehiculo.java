@@ -38,8 +38,6 @@ public abstract class Vehiculo {
 
     public abstract String obtenerTipo(); // metodo polimórfico
 
-    public abstract String mostrarInformacion(); // metodo polimórfico
-
     // Getters y setters
     public String getPlaca() { return placa; }
     public void setPlaca(String placa) { this.placa = placa; }

@@ -18,12 +18,6 @@ public class Moto extends Vehiculo {
         return "Moto";
     }
 
-    @Override
-    public String mostrarInformacion() {
-        return "Moto: " + marca + " " + modelo + " (" + anio + "), " +
-                (tieneSidecar ? "con" : "sin") + " sidecar, $" + precio;
-    }
-
     public boolean isTieneSidecar() { return tieneSidecar; }
     public void setTieneSidecar(boolean tieneSidecar) { this.tieneSidecar = tieneSidecar; }
 }

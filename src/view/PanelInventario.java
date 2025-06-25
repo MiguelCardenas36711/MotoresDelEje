@@ -8,8 +8,6 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.List;
-import java.text.DecimalFormat;
 
 public class PanelInventario extends JPanel {
     private JTable tabla;
@@ -63,15 +61,6 @@ public class PanelInventario extends JPanel {
 
         add(panelBotones, BorderLayout.SOUTH);
 
-
-//        JButton btnEliminar = new JButton("Eliminar Vehículo");
-//        btnEliminar.addActionListener(e -> eliminarVehiculoSeleccionado());
-//        add(btnEliminar, BorderLayout.SOUTH);
-
-
-        // Botón adicional si quieres seguir con "Cargar Datos"
-        // add(btnCargar, BorderLayout.SOUTH);
-
         txtMarcaFiltro.getDocument().addDocumentListener(new DocumentListener() {
             public void insertUpdate(DocumentEvent e) { cargarVehiculosFiltrados(); }
             public void removeUpdate(DocumentEvent e) { cargarVehiculosFiltrados(); }
@@ -84,29 +73,6 @@ public class PanelInventario extends JPanel {
         btnFiltrar.addActionListener(e -> cargarVehiculosFiltrados());
 
         cargarVehiculosFiltrados();
-    }
-
-    private void cargarVehiculos() {
-        modelo.setRowCount(0); // Limpia la tabla
-        List<Vehiculo> lista = inventario.obtenerTodos();
-
-        for (Vehiculo v : lista) {
-            String detalle = "";
-            if (v instanceof Carro carro) {
-                detalle = carro.getNumeroPuertas() + " puertas";
-            } else if (v instanceof Moto moto) {
-                detalle = moto.isTieneSidecar() ? "con sidecar" : "sin sidecar";
-            }
-
-            modelo.addRow(new Object[]{
-                    v.obtenerTipo(),
-                    v.getMarca(),
-                    v.getModelo(),
-                    v.getAnio(),
-                    "$" + v.getPrecio(),
-                    detalle
-            });
-        }
     }
 
     public void cargarVehiculosFiltrados() {
