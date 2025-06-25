@@ -53,8 +53,8 @@ public class VentanaPrincipal extends JFrame {
         JPanel panelBienvenida = new JPanel(new BorderLayout());
         panelBienvenida.setBackground(new Color(45, 45, 45));
 
-        JLabel lblBienvenida = new JLabel("🚗 Bienvenido a Motores del Eje", SwingConstants.CENTER);
-        lblBienvenida.setFont(new Font("Segoe UI", Font.BOLD, 28));
+        JLabel lblBienvenida = new JLabel("Bienvenido a Motores del Eje", SwingConstants.CENTER);
+        lblBienvenida.setFont(new Font("k2d", Font.BOLD, 28));
         lblBienvenida.setForeground(new Color(230, 230, 230));
 
         panelBienvenida.add(lblBienvenida, BorderLayout.CENTER);
