@@ -21,10 +21,11 @@ public class VentanaPrincipal extends JFrame {
     private void iniciarComponentes() {
         panelLateral = new JPanel();
         panelLateral.setLayout(new GridLayout(5, 1));
-        panelLateral.setBackground(new Color(30, 30, 30));
+        panelLateral.setBackground(new Color(55, 55, 55));
         panelLateral.setPreferredSize(new Dimension(200, 0));
 
         JButton btnInventario = new JButton("Inventario");
+//        btnInventario.setBackground(new Color(97, 95, 255)); // Indigo:500
         JButton btnAgregar = new JButton("Agregar Vehículo");
         JButton btnSalir = new JButton("Salir");
 
