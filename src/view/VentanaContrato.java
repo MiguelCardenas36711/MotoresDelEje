@@ -114,3 +114,4 @@ public class VentanaContrato extends JDialog {
         dispose();
     }
 }
+
